@@ -7,7 +7,7 @@
     "start": "node ./index.js",
     "dev": "node ./index.js"
   },
-  "license": "MIT",
+  "license": "MIT",  
   "devDependencies": {
     "nodemon": "^2.0.2"
   },
