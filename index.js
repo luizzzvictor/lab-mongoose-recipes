@@ -15,6 +15,8 @@ async function connect() {
 
     await Recipe.deleteMany()
 
+    // iteration 1
+
     const variavel = await Recipe.create({
       title: "Bolinho de Chuva",
       level: "Easy Peasy",
@@ -29,6 +31,8 @@ async function connect() {
 
     console.log(variavel.title)
 
+    //iteration 2
+
     const variavel2 = await Recipe.insertMany(data)
 
     console.log(variavel2[0].title)
@@ -37,13 +41,19 @@ async function connect() {
     console.log(variavel2[3].title)
     console.log(variavel2[4].title)
 
+    // iteration 3
+
     await Recipe.findOneAndUpdate({title:"Rigatoni alla Genovese"}, {duration: 100})
 
-    console.log("Rigatoni alla Genovese updated!")
+    console.log("********Rigatoni alla Genovese updated!")
+
+    //iteration 4
 
     await Recipe.deleteOne({title:"Carrot Cake"})
 
-    console.log("Carrot Cake deleted!")
+    console.log("*********Carrot Cake deleted!")
+
+    //iteration 5
 
     await mongoose.connection.close()
 
